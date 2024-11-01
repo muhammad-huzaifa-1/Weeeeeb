@@ -1,10 +1,12 @@
 // These are the imported Modules
 const express = require('express');
 const app = express();
-const cors = require('cors')
+const cors = require('cors');
+require("dotenv").config();
 const AddProduct = require('./Controller/AddProductController');
 const upload = require('./middleware/multer');
 const connectCloudinary = require('./connection/cloudinary');
+const port = process.env.PORT || 5000
 // mongoConnection module exporter
 const Connection = require('./connection/mongodbConnect');
 Connection;
@@ -145,4 +147,4 @@ app.post('/login',async(req,res)=>{
 })
 
 // Server listener port
-app.listen(5000);
+app.listen(port);
