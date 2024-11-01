@@ -13,7 +13,7 @@ const Login = () => {
 
   const loginUser = async()=>{
     setBtnDisable(true);
-    let result = await fetch(`http://localhost:5000/login`,{
+    let result = await fetch(`https://weeeeeb-mari.vercel.app/login`,{
       method:"post",
       body:JSON.stringify({email,password}),
       headers:{
