@@ -17,7 +17,7 @@ const Register = () => {
     const onRegister = async(e)=>{
         e.preventDefault();
         setBtnDisable(true)
-        let result = await fetch(`https://weeeeeb-mari.vercel.app/register`,{
+        let result = await fetch(`https://weeeeeb-final.vercel.app/register`,{
             method:"post",
             body: JSON.stringify({name,email,password}),
             headers:{
