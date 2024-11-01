@@ -37,7 +37,7 @@ const ProductsView = () => {
     },[productView])
 
     const getProductById = async()=>{
-        const result = await axios.get(`http://localhost:5000/getbyId/${url}`);
+        const result = await axios.get(`https://weeeeeb-mari.vercel.app/getbyId/${url}`);
         setProductView(result.data);
     }
 
