@@ -19,7 +19,9 @@ const UserModel = require('./schemas/User');
 // These are the middle-wares
 app.use(express.json());
 //these are cores
-app.use(cors());
+app.use(cors({
+    origin:"*"
+));
 
 
 // From here all are the API Routes
