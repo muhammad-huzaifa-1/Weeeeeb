@@ -9,7 +9,7 @@ const RelatedProducts = () => {
   let ProductCate = localStorage.getItem('category')
 
   const relatedProducts = async()=>{
-    let result = await axios.get(`http://localhost:5000/relatedProducts?category=${ProductCate}`);
+    let result = await axios.get(`https://weeeeeb-mari.vercel.app/relatedProducts?category=${ProductCate}`);
     setRelatedPro(result.data.slice(0,10))
   }
   useEffect(()=>{
